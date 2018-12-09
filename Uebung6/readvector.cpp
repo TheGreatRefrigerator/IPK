@@ -1,13 +1,24 @@
 //
 // Created by Amandus Butzer on 12/2/2018.
 //
-#include <io.hh>
 #include <vector>
+#include <iostream>
 
-using namespace std
+#include "io.hh"
+#include "statistics.hh"
+
+using namespace std;
 
 int main () {
-    vector<double>  read = read_vector();
-    cout << read << endl;
+    vector<double> read = read_vector();
+    cout << "( ";
+    for ( auto i : read) {
+        cout << i << ' ' ;
+    }
+    cout << ')' << endl;
+    cout << "Mean: " << mean(read) << endl;
+    cout << "Median: " << median(read) << endl;
+    cout << "Moment: " << moment(read, 4) << endl;
+    cout << "Standard Deviation: " << standard_deviation(read) << endl;
     return 0;
 }
