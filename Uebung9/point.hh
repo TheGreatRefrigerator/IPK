@@ -12,7 +12,7 @@ public:
   // default constructor
   Point();
 
-  // constructor for passed coordinates
+  // constructor für übergebene Koordinaten
   Point(double x, double y);
 
   // Accessors

@@ -5,7 +5,7 @@
 #include<string>
 
 // reads a plain PGM image file from the given filename
-// returns all read grey values in a two-dimensional int array
+// returns all read grey values in a twodimensional int array
 // NOTE: very simple implementation that can't handle comment lines
 std::vector<std::vector<int> > read_pgm(const std::string& filename);
 

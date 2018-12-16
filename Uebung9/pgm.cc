@@ -42,13 +42,13 @@ void write_pgm(const std::vector<std::vector<int> >& data, const std::string& fi
   file << "P2\n"
     << data.size() << " " << data[0].size() << "\n";
   
-  // normalize if necessary
+  // renormalize if necessary
   int maxVal = 0;
   for (const std::vector<int>& row : data)
     for (const int& entry : row)
       maxVal = std::max(entry,maxVal);
   
-  // normalizing output
+  // renormalizing output
   if (maxVal > 65535)
   {
     file << 65535 << "\n";
